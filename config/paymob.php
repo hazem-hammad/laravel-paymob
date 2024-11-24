@@ -5,7 +5,7 @@ declare(strict_types=1);
 
 return [
    
-    'base_url' => 'https://accept.paymob.com/api',
+    'base_url' => env('PAYMOB_BASE_URL', ''),
 
     // paymob configuration settings
     'api_key' => env('PAYMOB_API_KEY', ''),

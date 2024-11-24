@@ -35,6 +35,6 @@ trait Helper {
      */
     private function buildIframeUrl(string $paymentKey, string $iframeId): string
     {
-        return 'https://accept.paymobsolutions.com/api/acceptance/iframes/' . $iframeId . '?payment_token=' . $paymentKey;
+        return env('PAYMOB_BASE_URL', '') . '/' . $iframeId . '?payment_token=' . $paymentKey;
     }
 }
